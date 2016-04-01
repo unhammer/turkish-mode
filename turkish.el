@@ -79,6 +79,7 @@
 (eval-when-compile
   (require 'cl))
 
+;;;###autoload
 (define-minor-mode turkish-mode
   "Toggle Turkish mode.
 With no argument, this command toggles the mode.  Non-null prefix
@@ -109,6 +110,7 @@ accent of the character under cursor."
       (turkish-backward-word)
       (turkish-correct-region (point) p))))
 
+;;;###autoload
 (defun turkish-correct-region (start end)
   "Adds necessary accents to the words in the region."
   (interactive "r")
